@@ -18,7 +18,6 @@ class DrizzyBot
 
     phrase_arr[0...-1].each_with_index do |phrase, idx| # don't look for last phrase
       reply_to_matching_tweets(phrase, phrase_arr[idx + 1], album, song)
-      sleep(rand(240)) # add 0 - 4 minute gap between tweets
     end
   end
 
@@ -60,15 +59,18 @@ class DrizzyBot
   def reply_to_matching_tweets(phrase, next_phrase, album, song)
     tweet = most_popular_tweet(phrase, next_phrase)
 
-
     if tweet && !tweet.user.screen_name.match(/The110God/i) # tweet exists and isn't the drizzybot
       screen_name = '@' + tweet.user.screen_name
       album = album.gsub('_', '')
       song = song.gsub('_', '')
 
-      puts "tweeted at: #{screen_name}"
+      puts "Favorited then tweeted at: #{screen_name}"
+
+      @client.favorite(tweet)
       @client.update("#{screen_name} #{next_phrase} ##{song} ##{album} #drizzybot", 
                     in_reply_to_status_id: tweet.id)
+      
+      sleep(rand(90)) # add 0 - 1.5 minute gap between tweets
     end
   end
 end
