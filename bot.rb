@@ -1,6 +1,5 @@
 require 'twitter'
 require 'date'
-require 'pry'
 require_relative 'passwords'
 require_relative 'lyrics'
 
