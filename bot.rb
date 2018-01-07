@@ -70,7 +70,7 @@ class DrizzyBot
       @client.update("#{screen_name} #{next_phrase} ##{song} ##{album} #drizzybot", 
                     in_reply_to_status_id: tweet.id)
       
-      sleep(rand(90)) # add 0 - 1.5 minute gap between tweets
+      sleep(rand(300) + 180) # add 3 - 8 minute gap between tweets
     end
   end
 end
