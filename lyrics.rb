@@ -1,4 +1,5 @@
 require 'yaml'
-lyrics = YAML.load_file('lyrics.yaml')
+# puts Dir.pwd
+lyrics = YAML.load_file('../lyrics.yaml')
 
 ALBUMS = lyrics

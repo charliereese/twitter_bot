@@ -18,7 +18,15 @@ class DrizzyBot
 
     phrase_arr[0...-1].each_with_index do |phrase, idx| # don't look for last phrase
       reply_to_matching_tweets(phrase, phrase_arr[idx + 1], album, song)
+      sleep(rand(240)) # add 0 - 4 minute gap between tweets
     end
+  end
+
+  def tweet_phrase_from_song(album, song)
+    phrase_arr = ALBUMS[album][song]
+    phrase = phrase_arr.sample
+
+    @client.update("#{phrase} ##{album} ##{song}")
   end
 
   private
@@ -47,7 +55,6 @@ class DrizzyBot
       
       tweets.first
     end
-
   end
 
   def reply_to_matching_tweets(phrase, next_phrase, album, song)
@@ -65,9 +72,3 @@ class DrizzyBot
     end
   end
 end
-
-drizzy_bot = DrizzyBot.new
-# drizzy_bot.reply_to_tweets('nothing_was_the_same', 'started_from_the_bottom')
-# drizzy_bot.reply_to_tweets('nothing_was_the_same', 'hold_on_were_going_home')
-# drizzy_bot.reply_to_tweets('if_youre_reading_this_its_too_late', '6_god')
-drizzy_bot.reply_to_tweets('views', 'one_dance')
