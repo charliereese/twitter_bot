@@ -2,7 +2,8 @@
 A Drake twitter bot that replies to tweets containing Drake lyrics with the next lyrics in the song.
 
 ### Items of Note:
-- Song lyrics are in .yaml format
+- Song lyrics are in the lyrics.yaml file
+ - If the song you want to tweet is not present, added it is as simple as a quick copy and paste!
 - DrizzyBot written in ruby
   - Uses the twitter gem
 - This twitterbot isn't built to handle edge cases (just for laughs)
@@ -15,7 +16,7 @@ drizzy_bot = DrizzyBot.new
 drizzy_bot.reply_to_tweets('nothing_was_the_same', 'started_from_the_bottom')
 ```
 
-To execute the file, 
+To execute the file:
 
 ```shell
 $ ruby bot.rb
