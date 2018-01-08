@@ -9,7 +9,12 @@ A Drake twitter bot that replies to tweets containing Drake lyrics with the next
 - This twitterbot isn't built to handle edge cases (just for laughs)
 
 ### Setup
-- **YOU MUST CREATE A FILE CALLED passwords.rb IN THE ROOT FOLDER (twitter_bot) WITH THE FOLLOWING FORMAT FOR THE TWITTERBOT TO WORK**:
+1. You must use Ruby 2.1 or greater
+2. You must download the twitter gem:
+```shell
+$ gem install twitter
+```
+3. **YOU MUST CREATE A FILE CALLED passwords.rb IN THE ROOT FOLDER (twitter_bot) WITH THE FOLLOWING FORMAT FOR THE TWITTERBOT TO WORK**:
 ```ruby
 CONSUMER_KEY        = "your_consumer_key"        # these keys are generated here: https://apps.twitter.com/
 CONSUMER_SECRET     = "your_consumer_secret"
