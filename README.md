@@ -8,6 +8,15 @@ A Drake twitter bot that replies to tweets containing Drake lyrics with the next
   - Uses the twitter gem
 - This twitterbot isn't built to handle edge cases (just for laughs)
 
+### Setup
+- **YOU MUST CREATE A FILE CALLED passwords.rb IN THE ROOT FOLDER (twitter_bot) WITH THE FOLLOWING FORMAT FOR THE TWITTERBOT TO WORK**:
+```ruby
+CONSUMER_KEY        = "your_consumer_key"        # these keys are generated here: https://apps.twitter.com/
+CONSUMER_SECRET     = "your_consumer_secret"
+ACCESS_TOKEN        = "your_access_token"
+ACCESS_TOKEN_SECRET = "your_access_token_secret"
+```
+
 ### Usage A - Like and Reply to Tweets:
 Liking and replying to tweets is easy! To like and reply to tweets matching the album "nothing was the same" and the song "started from the bottom", clone the repository into an empty folder, and at the bottom of the bot.rb file (or in a new file - see files in songs folder for inspiration), write:
 
