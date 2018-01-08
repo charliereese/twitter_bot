@@ -25,6 +25,8 @@ class DrizzyBot
     phrase_arr = ALBUMS[album][song]
     phrase = phrase_arr.sample
 
+    puts "Drizzybot tweeted: #{phrase} ##{album} ##{song}"
+
     @client.update("#{phrase} ##{album} ##{song}")
   end
 
