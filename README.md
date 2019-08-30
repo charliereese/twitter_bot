@@ -1,6 +1,8 @@
 # Drake Twitter Bot
 A Drake twitter bot that replies to tweets containing Drake lyrics with the next lyrics in the song.
 
+Code walkthrough available on [charliereese.ca](charliereese.ca)
+
 ### Items of Note:
 - Song lyrics are in the lyrics.yaml file
   - If the song you want to tweet is not present, adding it is as simple as a quick copy and paste!
